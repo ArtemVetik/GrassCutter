@@ -33,6 +33,7 @@
         //make SRP batcher happy
         [HideInInspector]_PivotPosWS("_PivotPosWS", Vector) = (0,0,0,0)
         [HideInInspector]_BoundSize("_BoundSize", Vector) = (1,1,0)
+        [HideInInspector]_LossyBoundSize("_LossyBoundSize", Vector) = (1,1,0)
     }
 
     SubShader
@@ -85,6 +86,7 @@
             CBUFFER_START(UnityPerMaterial)
                 float3 _PivotPosWS;
                 float2 _BoundSize;
+                float2 _LossyBoundSize;
 
                 float _GrassWidth;
                 float _GrassHeight;
@@ -169,7 +171,7 @@
                 float3 bendDir = cameraTransformForwardWS;
                 bendDir.xz *= 0.5; //make grass shorter when bending, looks better
                 bendDir.y = min(-0.5,bendDir.y);//prevent grass become too long if camera forward is / near parallel to ground
-                positionOS = lerp(positionOS.xyz + bendDir * positionOS.y / -bendDir.y, positionOS.xyz, stepped * 0.95 + 0.05);//don't fully bend, will produce ZFighting
+                positionOS = lerp(positionOS.xyz + bendDir * positionOS.y / -bendDir.y, positionOS.xyz, stepped * 0.95 - 0.05);//don't fully bend, will produce ZFighting
 
                 //per grass height scale
                 positionOS.y *= perGrassHeight;
@@ -214,7 +216,8 @@
 
                 half3 V = viewWS / ViewWSLength;
 
-                half3 baseColor = tex2Dlod(_BaseColorTexture, float4(TRANSFORM_TEX(positionWS.xz,_BaseColorTexture),0,0)) * _BaseColor;//sample mip 0 only
+                float2 uv = ((positionWS.xz - _PivotPosWS.xz + _LossyBoundSize) / (_LossyBoundSize * 2));
+                half3 baseColor = tex2Dlod(_BaseColorTexture, float4(TRANSFORM_TEX(uv,_BaseColorTexture),0,0)) * _BaseColor;//sample mip 0 only
                 half3 albedo = lerp(_GroundColor,baseColor, IN.positionOS.y);
 
                 //indirect

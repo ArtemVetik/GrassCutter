@@ -1,34 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteAlways]
 public class InstancedIndirectGrassPosDefine : MonoBehaviour
 {
-    [Range(1, 40000000)]
     public int instanceCount = 1000000;
     public float drawDistance = 125;
 
     private int cacheCount = -1;
 
-    // Start is called before the first frame update
     void Start()
     {
         UpdatePosIfNeeded();
     }
+
     private void Update()
     {
         UpdatePosIfNeeded();
     }
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(300, 50, 200, 30), "Instance Count: " + instanceCount / 1000000 + "Million");
-        instanceCount = Mathf.Max(1, (int)(GUI.HorizontalSlider(new Rect(300, 100, 200, 30), instanceCount / 1000000f, 1, 10)) * 1000000);
 
-        GUI.Label(new Rect(300, 150, 200, 30), "Draw Distance: " + drawDistance);
-        drawDistance = Mathf.Max(1, (int)(GUI.HorizontalSlider(new Rect(300, 200, 200, 30), drawDistance / 25f, 1, 8)) * 25);
-        InstancedIndirectGrassRenderer.instance.drawDistance = drawDistance;
-    }
     private void UpdatePosIfNeeded()
     {
         if (instanceCount == cacheCount)
@@ -65,4 +55,9 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
         cacheCount = positions.Count;
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, transform.lossyScale * 2);
+    }
 }

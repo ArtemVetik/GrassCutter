@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3511933678040990990}
   m_Layer: 0
-  m_Name: GrassBendingTrail
+  m_Name: GrassBendingTrailRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,6 +78,7 @@ TrailRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

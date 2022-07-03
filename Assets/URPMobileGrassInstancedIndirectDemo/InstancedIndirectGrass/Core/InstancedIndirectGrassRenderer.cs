@@ -148,17 +148,6 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
         Graphics.DrawMeshInstancedIndirect(GetGrassMeshCache(), 0, instanceMaterial, renderBound, argsBuffer);
     }
 
-    private void OnGUI()
-    {
-        GUI.contentColor = Color.black;
-        GUI.Label(new Rect(200, 0, 400, 60), 
-            $"After CPU cell frustum culling,\n" +
-            $"-Visible cell count = {visibleCellIDList.Count}/{cellCountX * cellCountZ}\n" +
-            $"-Real compute dispatch count = {dispatchCount} (saved by batching = {visibleCellIDList.Count - dispatchCount})");
-
-        shouldBatchDispatch = GUI.Toggle(new Rect(400, 400, 200, 100), shouldBatchDispatch, "shouldBatchDispatch");
-    }
-
     void OnDisable()
     {
         //release all compute buffers
@@ -204,6 +193,7 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
         //always update
         instanceMaterial.SetVector("_PivotPosWS", transform.position);
         instanceMaterial.SetVector("_BoundSize", new Vector2(transform.localScale.x, transform.localScale.z));
+        instanceMaterial.SetVector("_LossyBoundSize", new Vector2(transform.lossyScale.x, transform.lossyScale.z));
 
         //early exit if no need to update buffer
         if (instanceCountCache == allGrassPos.Count &&
@@ -224,6 +214,7 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
         ///////////////////////////
         if (allInstancesPosWSBuffer != null)
             allInstancesPosWSBuffer.Release();
+
         allInstancesPosWSBuffer = new ComputeBuffer(allGrassPos.Count, sizeof(float)*3); //float3 posWS only, per grass
 
         if (visibleInstancesOnlyPosWSIDBuffer != null)
