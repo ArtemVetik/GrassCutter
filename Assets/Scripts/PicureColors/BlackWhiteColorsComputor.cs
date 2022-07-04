@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BlackWhiteColorsPresenter : MonoBehaviour
+public class BlackWhiteColorsComputor : MonoBehaviour
 {
     [SerializeField] public Camera _renderCamera;
     [SerializeField] public ComputeShader _shader;
@@ -44,7 +44,7 @@ public class BlackWhiteColorsPresenter : MonoBehaviour
         _colors = new BlackWhiteColors(textureSize, (int)_outputData[BlackColorIndex], (int)_outputData[WhiteColorIndex]);
     }
 
-    private void Update()
+    public void UpdateColors()
     {
         Execute();
         _colors.Update((int)_outputData[BlackColorIndex], (int)_outputData[WhiteColorIndex]);

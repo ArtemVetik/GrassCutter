@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]
 public class PlayerMovement : MonoBehaviour
@@ -7,14 +8,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private FloatingJoystick _joystick;
     [SerializeField] private float _speed;
 
+    public event UnityAction PositionUpdated;
+
     private void Update() => Move();
 
     private void Move()
     {
-        _rigidbody.velocity = new Vector3(_joystick.Horizontal * _speed,
-            _rigidbody.velocity.y, _joystick.Vertical * _speed);
+        var rawDirection = new Vector3(_joystick.Direction.x, 0, _joystick.Direction.y);
+        _rigidbody.velocity = rawDirection * _speed + Vector3.up * _rigidbody.velocity.y;
 
-        if (_joystick.Horizontal != 0 || _joystick.Vertical != 0)
+        if (rawDirection.magnitude > 0)
+        {
             transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
+            PositionUpdated?.Invoke();
+        }
     }
 }

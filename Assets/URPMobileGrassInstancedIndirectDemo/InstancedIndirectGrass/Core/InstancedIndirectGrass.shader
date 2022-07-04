@@ -173,7 +173,7 @@
                 float3 bendDir = cameraTransformForwardWS;
                 bendDir.xz *= 0.5; //make grass shorter when bending, looks better
                 bendDir.y = min(-0.5,bendDir.y);//prevent grass become too long if camera forward is / near parallel to ground
-                positionOS = lerp(positionOS.xyz + bendDir * positionOS.y / -bendDir.y, positionOS.xyz, stepped * 0.95 - 0.05);//don't fully bend, will produce ZFighting
+                positionOS = lerp(positionOS.xyz + bendDir * positionOS.y / -bendDir.y, positionOS.xyz, stepped * 0.95 + 0.05);//don't fully bend, will produce ZFighting
 
                 //per grass height scale
                 positionOS.y *= perGrassHeight;
@@ -199,8 +199,8 @@
                 float2 effectorOffsetXZ = _EffectorPosWS.xz - (positionOS + perGrassPivotPosWS).xz;
                 float effectorForce = 25 - clamp(length(effectorOffsetXZ), 0, 25);
                 float2 normalizeOffset = normalize(effectorOffsetXZ);
-                positionWS.x -= normalizeOffset.x * (effectorForce * 0.25) * IN.positionOS.y;
-                positionWS.z -= normalizeOffset.y * (effectorForce * 0.25) * IN.positionOS.y;
+                positionWS.x -= stepped * normalizeOffset.x * (effectorForce * 0.25) * IN.positionOS.y;
+                positionWS.z -= stepped * normalizeOffset.y * (effectorForce * 0.25) * IN.positionOS.y;
 
                 //vertex position logic done, complete posWS -> posCS
                 OUT.positionCS = TransformWorldToHClip(positionWS);

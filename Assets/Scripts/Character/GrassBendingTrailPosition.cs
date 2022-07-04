@@ -4,17 +4,10 @@ public class GrassBendingTrailPosition : MonoBehaviour
 {
     [SerializeField] private Transform _instancedIndirectGrass;
 
-    private Transform _transform;
-    private Vector3 _positionY;
-    private Vector3 _positionYGrass;
-
-    private void Awake()
+    private void Update()
     {
-        _transform = GetComponent<Transform>();
-
-        _positionY.y = _transform.position.y;
-        _positionYGrass.y = _instancedIndirectGrass.position.y;
-
-        _positionY.y = _positionYGrass.y;
+        var position = transform.position;
+        position.y = _instancedIndirectGrass.position.y;
+        transform.position = position;
     }
 }
