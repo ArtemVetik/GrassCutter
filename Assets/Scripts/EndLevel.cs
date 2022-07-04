@@ -19,14 +19,19 @@ public class EndLevel : MonoBehaviour
         _playerCamera.gameObject.SetActive(true);
     }
 
-    private void OnGUI()
+    public void Win()
     {
-        if (Event.current.Equals(Event.KeyboardEvent(KeyCode.Space.ToString())))
-        {
-            _winCanvas.enabled = true;
-            _progressSlider.gameObject.SetActive(false);
-            _endLEvelCamera.gameObject.SetActive(true);
-            _playerCamera.gameObject.SetActive(false);
-        }
+        _winCanvas.enabled = true;
+        _progressSlider.gameObject.SetActive(false);
+        _endLEvelCamera.gameObject.SetActive(true);
+        _playerCamera.gameObject.SetActive(false);
+    }
+
+    public void Lose()
+    {
+        _loseCanvas.enabled = true;
+        _progressSlider.gameObject.SetActive(false);
+        _endLEvelCamera.gameObject.SetActive(true);
+        _playerCamera.gameObject.SetActive(false);
     }
 }
