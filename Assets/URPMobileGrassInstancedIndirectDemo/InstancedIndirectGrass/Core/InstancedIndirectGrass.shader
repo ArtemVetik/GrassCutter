@@ -32,6 +32,7 @@
 
         //make SRP batcher happy
         [HideInInspector]_PivotPosWS("_PivotPosWS", Vector) = (0,0,0,0)
+        [HideInInspector]_EffectorPosWS("_EffectorPosWS", Vector) = (0,0,0,0)
         [HideInInspector]_BoundSize("_BoundSize", Vector) = (1,1,0)
         [HideInInspector]_LossyBoundSize("_LossyBoundSize", Vector) = (1,1,0)
     }
@@ -85,6 +86,7 @@
 
             CBUFFER_START(UnityPerMaterial)
                 float3 _PivotPosWS;
+                float3 _EffectorPosWS;
                 float2 _BoundSize;
                 float2 _LossyBoundSize;
 
@@ -194,6 +196,12 @@
                 float3 windOffset = cameraTransformRightWS * wind; //swing using billboard left right direction
                 positionWS.xyz += windOffset;
                 
+                float2 effectorOffsetXZ = _EffectorPosWS.xz - (positionOS + perGrassPivotPosWS).xz;
+                float effectorForce = 25 - clamp(length(effectorOffsetXZ), 0, 25);
+                float2 normalizeOffset = normalize(effectorOffsetXZ);
+                positionWS.x -= normalizeOffset.x * (effectorForce * 0.25) * IN.positionOS.y;
+                positionWS.z -= normalizeOffset.y * (effectorForce * 0.25) * IN.positionOS.y;
+
                 //vertex position logic done, complete posWS -> posCS
                 OUT.positionCS = TransformWorldToHClip(positionWS);
 

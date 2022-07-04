@@ -13,6 +13,7 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
     [Header("Settings")]
     public float drawDistance = 125;//this setting will affect performance a lot!
     public Material instanceMaterial;
+    public Transform _effector;
 
     [Header("Internal")]
     public ComputeShader cullingComputeShader;
@@ -192,6 +193,7 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
     {
         //always update
         instanceMaterial.SetVector("_PivotPosWS", transform.position);
+        instanceMaterial.SetVector("_EffectorPosWS", _effector.position);
         instanceMaterial.SetVector("_BoundSize", new Vector2(transform.localScale.x, transform.localScale.z));
         instanceMaterial.SetVector("_LossyBoundSize", new Vector2(transform.lossyScale.x, transform.lossyScale.z));
 
