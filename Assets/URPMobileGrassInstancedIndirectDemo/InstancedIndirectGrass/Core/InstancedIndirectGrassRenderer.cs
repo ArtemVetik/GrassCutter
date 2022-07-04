@@ -180,7 +180,7 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
             verts[1] = new Vector3(+0.25f, 0);
             verts[2] = new Vector3(-0.0f, 1);
             //single grass (Triangle index)
-            int[] trinagles = new int[3] { 2, 1, 0, }; //order to fit Cull Back in grass shader
+            int[] trinagles = new int[6] { 2, 1, 0, 2, 0, 1}; //order to fit Cull Back in grass shader
 
             cachedGrassMesh.SetVertices(verts);
             cachedGrassMesh.SetTriangles(trinagles, 0);

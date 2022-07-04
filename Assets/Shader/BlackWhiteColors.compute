@@ -2,7 +2,7 @@
 #pragma kernel ColorSeparatorMain
 
 Texture2D<float4> InputTexture;
-RWStructuredBuffer<uint> OutputBuffer;
+RWBuffer<uint> OutputBuffer;
 
 [numthreads(64, 1, 1)]
 void ColorSeparatorInitialize(uint3 id : SV_DispatchThreadID)
@@ -14,7 +14,7 @@ void ColorSeparatorInitialize(uint3 id : SV_DispatchThreadID)
 void ColorSeparatorMain(uint3 id : SV_DispatchThreadID)
 {
 	float4 col = InputTexture[id.xy];
-	uint sum = abs(floor(col.r * 255.0)) + abs(floor(col.g * 255.0)) + abs(floor(col.b * 255.0));
+	uint sum = floor(col.r * 255.0) + floor(col.g * 255.0) + floor(col.b * 255.0);
 
 	InterlockedAdd(OutputBuffer[sum], 1);
 }

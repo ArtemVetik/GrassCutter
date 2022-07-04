@@ -23,9 +23,11 @@ public class LevelProgress : MonoBehaviour
 
     private void UpdateProgress()
     {
-        _computor.UpdateColors();
-        WinPercentage = 1f - (float)_computor.Colors.BlackColors / _computor.Colors.StartBlackColors;
-        LosePercentage = 1f - (float)_computor.Colors.WhiteColors / _computor.Colors.StartWhiteColors;
-        Updated?.Invoke();
+        _computor.UpdateColors(() =>
+        {
+            WinPercentage = 1f - (float)_computor.Colors.BlackColors / _computor.Colors.StartBlackColors;
+            LosePercentage = 1f - (float)_computor.Colors.WhiteColors / _computor.Colors.StartWhiteColors;
+            Updated?.Invoke();
+        });
     }
 }

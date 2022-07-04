@@ -30,8 +30,8 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
         UnityEngine.Random.InitState(123);
 
         //auto keep density the same
-        float scale = Mathf.Sqrt((instanceCount / 4)) / 2f;
-        transform.localScale = new Vector3(scale, transform.localScale.y, scale);
+        //float scale = Mathf.Sqrt((instanceCount / 4)) / 2f;
+        //transform.localScale = new Vector3(scale, transform.localScale.y, scale);
 
         //////////////////////////////////////////////////////////////////////////
         //can define any posWS in this section, random is just an example
