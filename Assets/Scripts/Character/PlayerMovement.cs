@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     public event UnityAction PositionUpdated;
 
-    private void Update() => Move();
+    private void FixedUpdate() => Move();
 
     private void Move()
     {
