@@ -464,6 +464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoseSlider
       objectReference: {fileID: 0}
+    - target: {fileID: 2482728081838297375, guid: 1655ad8223f244d34a1dc63ee78eac3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1655ad8223f244d34a1dc63ee78eac3f, type: 3}
 --- !u!224 &5618941631645475324 stripped
@@ -615,7 +619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2482728081838297372, guid: 1655ad8223f244d34a1dc63ee78eac3f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -126
+      value: -85
       objectReference: {fileID: 0}
     - target: {fileID: 2482728081838297372, guid: 1655ad8223f244d34a1dc63ee78eac3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
