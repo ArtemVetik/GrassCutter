@@ -194,7 +194,7 @@
                 wind += (sin(_Time.y * _WindCFrequency + perGrassPivotPosWS.x * _WindCTiling.x + perGrassPivotPosWS.z * _WindCTiling.y)*_WindCWrap.x+_WindCWrap.y) * _WindCIntensity; //windC
                 wind *= IN.positionOS.y; //wind only affect top region, don't affect root region
                 float3 windOffset = cameraTransformRightWS * wind; //swing using billboard left right direction
-                positionWS.xyz += windOffset;
+                positionWS.xyz += windOffset * stepped;
                 
                 float2 effectorOffsetXZ = _EffectorPosWS.xz - (positionOS + perGrassPivotPosWS).xz;
                 float effectorForce = 25 - clamp(length(effectorOffsetXZ), 0, 25);
@@ -232,25 +232,10 @@
                 half3 lightingResult = SampleSH(0) * albedo;
 
                 //main direct light
-                lightingResult += ApplySingleDirectLight(mainLight, N, V, albedo, positionOS.y);
+                lightingResult += ApplySingleDirectLight(mainLight, N, V, albedo, positionOS.y) / 3;
 
                 // Additional lights loop
-#if _ADDITIONAL_LIGHTS
 
-                // Returns the amount of lights affecting the object being renderer.
-                // These lights are culled per-object in the forward renderer
-                int additionalLightsCount = GetAdditionalLightsCount();
-                for (int i = 0; i < additionalLightsCount; ++i)
-                {
-                    // Similar to GetMainLight, but it takes a for-loop index. This figures out the
-                    // per-object light index and samples the light buffer accordingly to initialized the
-                    // Light struct. If _ADDITIONAL_LIGHT_SHADOWS is defined it will also compute shadows.
-                    Light light = GetAdditionalLight(i, positionWS);
-
-                    // Same functions used to shade the main light.
-                    lightingResult += ApplySingleDirectLight(light, N, V, albedo, positionOS.y);
-                }
-#endif
 
                 //fog
                 float fogFactor = ComputeFogFactor(OUT.positionCS.z);
