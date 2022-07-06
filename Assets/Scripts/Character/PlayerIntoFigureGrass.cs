@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class PlayerIntoFigureGrass : MonoBehaviour
 {
-    [SerializeField] private PlayerMovement _player;
     [SerializeField] private LevelProgress _progress;
 
     private float _previousProgress;

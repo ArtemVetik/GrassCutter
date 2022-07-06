@@ -534,6 +534,8 @@ GameObject:
   - component: {fileID: 344885631}
   - component: {fileID: 344885634}
   - component: {fileID: 344885633}
+  - component: {fileID: 344885630}
+  - component: {fileID: 344885635}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -541,6 +543,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &344885630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344885629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d7b511b84334dedba1acb4945a9282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _progress: {fileID: 1465737612}
 --- !u!114 &344885631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,6 +618,20 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &344885635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344885629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8143493268aba492dbe10b45877695f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerMovement: {fileID: 344885631}
+  _figureGrass: {fileID: 344885630}
 --- !u!1001 &358634084
 PrefabInstance:
   m_ObjectHideFlags: 0
