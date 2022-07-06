@@ -793,7 +793,6 @@ GameObject:
   - component: {fileID: 344885634}
   - component: {fileID: 344885633}
   - component: {fileID: 344885630}
-  - component: {fileID: 344885635}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -810,10 +809,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 344885629}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77d7b511b84334dedba1acb4945a9282, type: 3}
+  m_Script: {fileID: 11500000, guid: 80fec099102d0e14a8f459c1c6fa954d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _progress: {fileID: 1465737612}
+  _playerMovement: {fileID: 344885631}
+  _model: {fileID: 1756576889}
+  _figureGrass: {fileID: 1465737613}
 --- !u!114 &344885631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,21 +878,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!114 &344885635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344885629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8143493268aba492dbe10b45877695f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerMovement: {fileID: 344885631}
-  _model: {fileID: 1756576889}
-  _figureGrass: {fileID: 344885630}
 --- !u!1001 &358634084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1297,7 +1283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 177638, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22451668, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_Pivot.x
@@ -1983,6 +1969,7 @@ GameObject:
   - component: {fileID: 1465737610}
   - component: {fileID: 1465737611}
   - component: {fileID: 1465737612}
+  - component: {fileID: 1465737613}
   m_Layer: 0
   m_Name: LevelProgress
   m_TagString: Untagged
@@ -2032,6 +2019,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playermovement: {fileID: 344885631}
   _computor: {fileID: 1465737611}
+--- !u!114 &1465737613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465737609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d7b511b84334dedba1acb4945a9282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _progress: {fileID: 1465737612}
 --- !u!1 &1638066354
 GameObject:
   m_ObjectHideFlags: 0
