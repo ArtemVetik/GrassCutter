@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerIntoFigureGrass : MonoBehaviour
+public class PictureEvents : MonoBehaviour
 {
     [SerializeField] private LevelProgress _progress;
 
-    private float _previousProgress;
+    private float _previousLoseProgress;
 
-    public event UnityAction FigureGrassChanged;
+    public event UnityAction CuttingPicture;
 
     private void OnEnable()
     {
@@ -23,15 +21,15 @@ public class PlayerIntoFigureGrass : MonoBehaviour
 
     private void Start()
     {
-        _previousProgress = 0f;
+        _previousLoseProgress = 0f;
     }
 
     private void OnUpdateProgress()
     {
-        if (_progress.LosePercentage > _previousProgress)
+        if (_progress.LosePercentage > _previousLoseProgress)
         {
-            _previousProgress = _progress.LosePercentage;
-            FigureGrassChanged?.Invoke();
+            _previousLoseProgress = _progress.LosePercentage;
+            CuttingPicture?.Invoke();
         }
     }
 }
