@@ -21,7 +21,7 @@ public class PlayerAccuracyCalculation : MonoBehaviour
 
     private void CheckPercentAccuracy()
     {
-        _accuracyPercent = (1f - _levelProgress.LosePercentage).ToString("0.00") + "% Accuracy";
+        _accuracyPercent = (1f - _levelProgress.LosePercentage).ToString("000.00") + "% Accuracy";
 
         _percentText.text = _accuracyPercent;
     }
