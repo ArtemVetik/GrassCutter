@@ -197,10 +197,10 @@
                 positionWS.xyz += windOffset * stepped;
                 
                 float2 effectorOffsetXZ = _EffectorPosWS.xz - (positionOS + perGrassPivotPosWS).xz;
-                float effectorForce = 25 - clamp(length(effectorOffsetXZ), 0, 25);
+                float effectorForce = 15 - clamp(length(effectorOffsetXZ), 0, 15);
                 float2 normalizeOffset = normalize(effectorOffsetXZ);
-                positionWS.x -= stepped * normalizeOffset.x * (effectorForce * 0.25) * IN.positionOS.y;
-                positionWS.z -= stepped * normalizeOffset.y * (effectorForce * 0.25) * IN.positionOS.y;
+                positionWS.x -= stepped * normalizeOffset.x * (effectorForce * 0.05) * IN.positionOS.y;
+                positionWS.z -= stepped * normalizeOffset.y * (effectorForce * 0.05) * IN.positionOS.y;
 
                 //vertex position logic done, complete posWS -> posCS
                 OUT.positionCS = TransformWorldToHClip(positionWS);
