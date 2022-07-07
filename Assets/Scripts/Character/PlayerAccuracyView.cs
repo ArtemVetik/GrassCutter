@@ -1,13 +1,11 @@
 using UnityEngine;
 using TMPro;
 
-public class PlayerAccuracyCalculation : MonoBehaviour
+public class PlayerAccuracyView : MonoBehaviour
 {
     [SerializeField] private LevelProgress _levelProgress;
     [SerializeField] private EndLevelTrigger _endLevelTrigger;
     [SerializeField] private TMP_Text _percentText;
-
-    private string _accuracyPercent;
 
     private void OnEnable()
     {
@@ -21,8 +19,7 @@ public class PlayerAccuracyCalculation : MonoBehaviour
 
     private void CheckPercentAccuracy()
     {
-        _accuracyPercent = (100 * 1f - _levelProgress.LosePercentage).ToString("0.00") + "% Accuracy";
-
-        _percentText.text = _accuracyPercent;
+        var accuracyPercent = ((1f - _levelProgress.LosePercentage) * 100).ToString("0.00") + "% Accuracy";
+        _percentText.text = accuracyPercent;
     }
 }

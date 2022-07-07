@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class GrassBendingTrailPosition : MonoBehaviour
 {
-    [SerializeField] private Transform _instancedIndirectGrass;
+    [SerializeField] private InstancedIndirectGrassPosDefine _instancedIndirectGrass;
 
     private void Update()
     {
         var position = transform.position;
-        position.y = _instancedIndirectGrass.position.y;
+        position.y = _instancedIndirectGrass.transform.position.y;
         transform.position = position;
     }
 }

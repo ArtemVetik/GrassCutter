@@ -25,9 +25,14 @@ public class LevelProgress : MonoBehaviour
     {
         _computor.UpdateColors(() =>
         {
+            var previousWinPercentage = WinPercentage;
+            var previousLosePercentage = LosePercentage;
+
             WinPercentage = 1f - (float)_computor.Colors.BlackColors / _computor.Colors.StartBlackColors;
             LosePercentage = 1f - (float)_computor.Colors.WhiteColors / _computor.Colors.StartWhiteColors;
-            Updated?.Invoke();
+
+            if (previousWinPercentage != WinPercentage || previousLosePercentage != LosePercentage)
+                Updated?.Invoke();
         });
     }
 }

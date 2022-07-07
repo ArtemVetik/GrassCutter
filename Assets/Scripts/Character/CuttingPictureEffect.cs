@@ -5,16 +5,16 @@ public class CuttingPictureEffect : MonoBehaviour
 {
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private Transform _model;
-    [SerializeField] private PictureEvents _figureGrass;
+    [SerializeField] private PictureEvents _puctureEvents;
 
     private void OnEnable()
     {
-        _figureGrass.CuttingPicture += OnCutPicture;
+        _puctureEvents.CuttingPicture += OnCutPicture;
     }
 
     private void OnDisable()
     {
-        _figureGrass.CuttingPicture -= OnCutPicture;
+        _puctureEvents.CuttingPicture -= OnCutPicture;
     }
 
     private void OnCutPicture()

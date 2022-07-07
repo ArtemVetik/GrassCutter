@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 1990302402498608701}
   - component: {fileID: 1990302402498608702}
   - component: {fileID: 3976458783320565986}
+  - component: {fileID: 5972646972424335865}
   m_Layer: 5
   m_Name: WinCanvas
   m_TagString: Untagged
@@ -447,6 +448,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvas: {fileID: 1990302402498608700}
+--- !u!114 &5972646972424335865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990302402498608703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c80444d1aa9a44118568b032355ac57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelProgress: {fileID: 0}
+  _endLevelTrigger: {fileID: 0}
+  _percentText: {fileID: 2177904792908534832}
 --- !u!1 &1990302402724222739
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +609,7 @@ GameObject:
   - component: {fileID: 8024632795774096378}
   - component: {fileID: 2177904792908534832}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: AccuracyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
