@@ -69,7 +69,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
     m_Floats:
     - _AllowAlphaOverflow: 0
     - _AlphaClip: 0
@@ -90,16 +89,16 @@ Material:
     - _FadeDistance: 0.5
     - _FoamAmount: 0.2
     - _FoamDepth: 0.03
-    - _FoamDirection: 0
+    - _FoamDirection: 1
     - _FoamFromTexture: 1
     - _FoamMode: 1
     - _FoamNoiseAmount: 1
     - _FoamProcedural: 1
-    - _FoamScale: 0.2
-    - _FoamSharpness: 0.899
-    - _FoamSpeed: 0.5
-    - _FoamStretchX: 1
-    - _FoamStretchY: 1
+    - _FoamScale: 0.5
+    - _FoamSharpness: 0.709
+    - _FoamSpeed: 0.13
+    - _FoamStretchX: 5
+    - _FoamStretchY: 5
     - _FoamTexture: 1
     - _Frequency: 0.08
     - _GlossMapScale: 0
@@ -133,7 +132,7 @@ Material:
     - _WaveFrequency: 1
     - _WaveMode: 2
     - _WaveNoise: 0
-    - _WaveSpeed: 1
+    - _WaveSpeed: 0.8
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:

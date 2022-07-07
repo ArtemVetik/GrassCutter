@@ -150,7 +150,8 @@
 
                 float3 perGrassPivotPosWS = _AllInstancesTransformBuffer[_VisibleInstanceOnlyTransformIDBuffer[instanceID]];//we pre-transform to posWS in C# now
 
-                float perGrassHeight = lerp(2,5,(sin(perGrassPivotPosWS.x*23.4643 + perGrassPivotPosWS.z) * 0.45 + 0.55)) * _GrassHeight;
+                //float perGrassHeight = lerp(2,5,(sin(perGrassPivotPosWS.x*23.4643 + perGrassPivotPosWS.z) * 0.45 + 0.55)) * _GrassHeight;
+                float perGrassHeight = _GrassHeight;
 
                 //get "is grass stepped" data(bending) from RT
                 float2 grassBendingUV = ((perGrassPivotPosWS.xz - _PivotPosWS.xz) / _BoundSize) * 0.5 + 0.5;//claculate where is this grass inside bound (can optimize to 2 MAD)
@@ -173,7 +174,7 @@
                 float3 bendDir = cameraTransformForwardWS;
                 bendDir.xz *= 0.5; //make grass shorter when bending, looks better
                 bendDir.y = min(-0.5,bendDir.y);//prevent grass become too long if camera forward is / near parallel to ground
-                positionOS = lerp(positionOS.xyz + bendDir * positionOS.y / -bendDir.y, positionOS.xyz, stepped * 0.95 + 0.05);//don't fully bend, will produce ZFighting
+                positionOS = lerp(positionOS.xyz + bendDir * positionOS.y / -bendDir.y, positionOS.xyz, stepped * 0.95 + 0.01);//don't fully bend, will produce ZFighting
 
                 //per grass height scale
                 positionOS.y *= perGrassHeight;
@@ -197,10 +198,10 @@
                 positionWS.xyz += windOffset * stepped;
                 
                 float2 effectorOffsetXZ = _EffectorPosWS.xz - (positionOS + perGrassPivotPosWS).xz;
-                float effectorForce = 15 - clamp(length(effectorOffsetXZ), 0, 15);
+                float effectorForce = 7 - clamp(length(effectorOffsetXZ), 0, 7);
                 float2 normalizeOffset = normalize(effectorOffsetXZ);
-                positionWS.x -= stepped * normalizeOffset.x * (effectorForce * 0.05) * IN.positionOS.y;
-                positionWS.z -= stepped * normalizeOffset.y * (effectorForce * 0.05) * IN.positionOS.y;
+                positionWS.x -= stepped * normalizeOffset.x * (effectorForce * 0.1) * IN.positionOS.y;
+                positionWS.z -= stepped * normalizeOffset.y * (effectorForce * 0.1) * IN.positionOS.y;
 
                 //vertex position logic done, complete posWS -> posCS
                 OUT.positionCS = TransformWorldToHClip(positionWS);
@@ -225,8 +226,10 @@
                 half3 V = viewWS / ViewWSLength;
 
                 float2 uv = ((positionWS.xz - _PivotPosWS.xz + _LossyBoundSize) / (_LossyBoundSize * 2));
-                half3 baseColor = tex2Dlod(_BaseColorTexture, float4(TRANSFORM_TEX(uv,_BaseColorTexture),0,0)) * _BaseColor;//sample mip 0 only
-                half3 albedo = lerp(_GroundColor,baseColor, IN.positionOS.y);
+                half3 baseColor = tex2Dlod(_BaseColorTexture, float4(TRANSFORM_TEX(uv,_BaseColorTexture),0,0));//sample mip 0 only
+                half3 startColor = baseColor * (_BaseColor * stepped + _GroundColor * 2 * (1 - stepped));
+                half3 endColor = baseColor * (_BaseColor * 2 * stepped + _GroundColor * 2 * (1 - stepped));
+                half3 albedo = lerp(startColor, endColor, IN.positionOS.y);
 
                 //indirect
                 half3 lightingResult = SampleSH(0) * albedo;

@@ -11,6 +11,11 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
 
     void Start()
     {
+        foreach (var item in InstancedIndirectGrassRenderer.instance.allGrassPos)
+        {
+            if (item == Vector3.zero)
+                Debug.Log("ZERO!");
+        }
         UpdatePosIfNeeded();
     }
 
@@ -39,10 +44,11 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
         List<Vector3> positions = new List<Vector3>(instanceCount);
         for (int i = 0; i < instanceCount; i++)
         {
-            Vector3 pos = Vector3.zero;
-
-            pos.x = UnityEngine.Random.Range(-1f, 1f) * transform.lossyScale.x;
-            pos.z = UnityEngine.Random.Range(-1f, 1f) * transform.lossyScale.z;
+            Vector3 pos = new Vector3(
+                UnityEngine.Random.Range(-1f, 1f) * transform.lossyScale.x,
+                0,
+                UnityEngine.Random.Range(-1f, 1f) * transform.lossyScale.z
+                );
 
             //transform to posWS in C#
             pos += transform.position;
