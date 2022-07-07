@@ -71,8 +71,8 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _GrassHeight: 5
-    - _GrassWidth: 1
+    - _GrassHeight: 0.48
+    - _GrassWidth: 0.25
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _QueueOffset: 0
@@ -85,23 +85,23 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _WindAFrequency: 4
-    - _WindAIntensity: 1
+    - _WindAIntensity: 0.1
     - _WindBFrequency: 2
     - _WindBIntensity: 0.25
     - _WindCFrequency: 2
-    - _WindCIntensity: 0.125
+    - _WindCIntensity: 0.05
     - _WindFrequency: 4
     - _WindIntensity: 1
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BoundSize: {r: 150, g: 150, b: 0, a: 0}
+    - _BoundSize: {r: 20, g: 20, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EffectorPosWS: {r: 0, g: 6.5, b: -293.5, a: 0}
+    - _EffectorPosWS: {r: 0, g: 0, b: -51.68, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 0.23914579, g: 0.3018868, b: 0.23467426, a: 1}
-    - _LossyBoundSize: {r: 150, g: 150, b: 0, a: 0}
+    - _LossyBoundSize: {r: 20, g: 20, b: 0, a: 0}
     - _PivotPosWS: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _WindADirection: {r: 0.1, g: 0.1, b: 0, a: 1}
