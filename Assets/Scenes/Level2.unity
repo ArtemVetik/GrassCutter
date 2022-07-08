@@ -347,6 +347,7 @@ MonoBehaviour:
   _levelProgress: {fileID: 1465737612}
   _maxErrorPercentage: 0.5
   _winPercentage: 0.95
+  _winEffect: {fileID: 874932543}
 --- !u!1 &211725259
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,6 +1059,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
+--- !u!1001 &874932542
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8071686248516021687, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+      propertyPath: m_Name
+      value: ConfettiBlastRainbow
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071686248516059101, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071686248516059101, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071686248516059101, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071686248516059101, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -31.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071686248516059101, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071686248516059101, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071686248516059101, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071686248516059101, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071686248516059101, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071686248516059101, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071686248516059101, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+--- !u!198 &874932543 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8071686248497764413, guid: e3d5ff8d111b0455e8ece65a93e2f281, type: 3}
+  m_PrefabInstance: {fileID: 874932542}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &948014865 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3561803272988199436, guid: 06ae6a912b6ebb14a8ce02fcb816a8ce, type: 3}
@@ -1131,7 +1194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1990302400784245067, guid: 42b086877450748079657b80dd4139c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level2
+      value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 1990302400784245067, guid: 42b086877450748079657b80dd4139c2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1610,7 +1673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 744219611840591791, guid: 88252780bf77d4323988b8d3b71790a4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level1
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 744219611840591791, guid: 88252780bf77d4323988b8d3b71790a4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1911,7 +1974,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834532462}
   m_LocalRotation: {x: 0.6828276, y: 0, z: 0, w: 0.7305796}
-  m_LocalPosition: {x: -10, y: -21, z: 419}
+  m_LocalPosition: {x: -9.6, y: -98.7, z: 405.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1239878760}
