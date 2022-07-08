@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 
 [ExecuteAlways]
@@ -22,3 +23,4 @@ public class PictureCameraSetup : MonoBehaviour
         transform.position = _grass.transform.position + Vector3.up;
     }
 }
+#endif
