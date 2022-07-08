@@ -225,7 +225,7 @@
 
                 half3 V = viewWS / ViewWSLength;
 
-                float2 uv = (((positionOS + perGrassPivotPosWS).xz - _PivotPosWS.xz + _LossyBoundSize) / (_LossyBoundSize * 2));
+                float2 uv = (((IN.positionOS + perGrassPivotPosWS).xz - _PivotPosWS.xz + _LossyBoundSize) / (_LossyBoundSize * 2));
                 half3 baseColor = tex2Dlod(_BaseColorTexture, float4(TRANSFORM_TEX(uv,_BaseColorTexture),0,0));//sample mip 0 only
                 half3 startColor = baseColor * (_BaseColor * stepped + _GroundColor * 2 * (1 - stepped));
                 half3 endColor = baseColor * (_BaseColor * 2 * stepped + _GroundColor * 2 * (1 - stepped));
