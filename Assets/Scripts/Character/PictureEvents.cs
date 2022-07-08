@@ -6,8 +6,10 @@ public class PictureEvents : MonoBehaviour
     [SerializeField] private LevelProgress _progress;
 
     private float _previousLoseProgress;
+    private float _previousWinProgress;
 
     public event UnityAction CuttingPicture;
+    public event UnityAction CuttingGrass;
 
     private void OnEnable()
     {
@@ -22,6 +24,7 @@ public class PictureEvents : MonoBehaviour
     private void Start()
     {
         _previousLoseProgress = 0f;
+        _previousWinProgress = 0f;
     }
 
     private void OnUpdateProgress()
@@ -30,6 +33,11 @@ public class PictureEvents : MonoBehaviour
         {
             _previousLoseProgress = _progress.LosePercentage;
             CuttingPicture?.Invoke();
+        }
+        if (_progress.WinPercentage > _previousWinProgress)
+        {
+            _previousWinProgress = _progress.WinPercentage;
+            CuttingGrass?.Invoke();
         }
     }
 }

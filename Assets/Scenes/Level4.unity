@@ -195,6 +195,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3172932294073532939, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _levelEvents
+      value: 
+      objectReference: {fileID: 1465737613}
+    - target: {fileID: 3172932294073532939, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
       propertyPath: _cuttingEffect
       value: 
       objectReference: {fileID: 1129371}
