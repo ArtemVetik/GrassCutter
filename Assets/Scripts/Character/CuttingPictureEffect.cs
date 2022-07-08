@@ -22,13 +22,13 @@ public class CuttingPictureEffect : MonoBehaviour
     private void OnDisable()
     {
         _puctureEvents.CuttingPicture -= OnCutPicture;
+        _material.color = _startColor;
     }
 
     private void Start()
     {
-        _material = _renderer.material;
+        _material = _renderer.sharedMaterial;
         _startColor = _material.color;
-        _renderer.material.color = _startColor;
     }
 
     private void OnCutPicture()
@@ -38,13 +38,14 @@ public class CuttingPictureEffect : MonoBehaviour
         _model.DOShakeScale(duration, 0.25f, 10);
         _playerMovement.ChangeSpeed(0.5f, duration);
 
-        ChangeColor(_targetColor, 2, _startColor, 1);
+        ChangeColor(_targetColor, duration * 10, _startColor, duration * 10);
         Instantiate(_smokeEffect, _smokeEffectContainer);
     }
 
     private void ChangeColor(Color targetColor, float durationToTarget, Color normalColor, float durationToNormal)
     {
-        _renderer.material.DOColor(targetColor, durationToTarget)
-            .OnComplete(() => _renderer.material.DOColor(normalColor, durationToNormal));
+        _material.DOKill();
+        _material.DOColor(targetColor, durationToTarget)
+            .OnComplete(() => _material.DOColor(normalColor, durationToNormal));
     }
 }

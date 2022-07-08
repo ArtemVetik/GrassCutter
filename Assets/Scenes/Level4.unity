@@ -183,6 +183,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1160208899}
     - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 05728e81dc7944a8db546cc07043b399, type: 2}
+    - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
       propertyPath: _figureGrass
       value: 
       objectReference: {fileID: 1465737613}
