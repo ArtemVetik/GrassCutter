@@ -6,6 +6,8 @@ public class CuttingPictureEffect : MonoBehaviour
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private Transform _model;
     [SerializeField] private PictureEvents _puctureEvents;
+    [SerializeField] private ParticleSystem _cuttingPicturetemplate;
+    [SerializeField] private Transform _effectContainer;
 
     private void OnEnable()
     {
@@ -22,5 +24,6 @@ public class CuttingPictureEffect : MonoBehaviour
         var duration = 0.05f;
         _model.DOShakeScale(duration, 0.25f, 10);
         _playerMovement.ChangeSpeed(0.5f, duration);
+        Instantiate(_cuttingPicturetemplate, _effectContainer);
     }
 }
