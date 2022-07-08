@@ -3,15 +3,16 @@ using DG.Tweening;
 
 public class CuttingPictureEffect : MonoBehaviour
 {
+    [SerializeField] private PictureEvents _puctureEvents;
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private Transform _model;
-    [SerializeField] private PictureEvents _puctureEvents;
-    [SerializeField] private ParticleSystem _smokeEffect;
     [SerializeField] private Transform _smokeEffectContainer;
-    [SerializeField] private Material _playerMaterial;
+    [SerializeField] private ParticleSystem _smokeEffect;
+    [SerializeField] private Renderer _renderer;
     [SerializeField] private Color _targetColor;
 
     private Color _startColor;
+    private Material _material;
 
     private void OnEnable()
     {
@@ -25,23 +26,25 @@ public class CuttingPictureEffect : MonoBehaviour
 
     private void Start()
     {
-        _startColor = new Color(1, 1, 1);
-
-        _playerMaterial.color = _startColor;
+        _material = _renderer.material;
+        _startColor = _material.color;
+        _renderer.material.color = _startColor;
     }
 
     private void OnCutPicture()
     {
         var duration = 0.05f;
+
         _model.DOShakeScale(duration, 0.25f, 10);
-        ChangeColor(_targetColor, 2, _startColor, 2);
         _playerMovement.ChangeSpeed(0.5f, duration);
+
+        ChangeColor(_targetColor, 2, _startColor, 1);
         Instantiate(_smokeEffect, _smokeEffectContainer);
     }
 
     private void ChangeColor(Color targetColor, float durationToTarget, Color normalColor, float durationToNormal)
     {
-        _playerMaterial.DOColor(targetColor, durationToTarget).
-            OnComplete(() => _playerMaterial.DOColor(normalColor, durationToNormal));
+        _renderer.material.DOColor(targetColor, durationToTarget)
+            .OnComplete(() => _renderer.material.DOColor(normalColor, durationToNormal));
     }
 }
