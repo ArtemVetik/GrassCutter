@@ -187,11 +187,35 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1465737613}
     - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _smokeEffect
+      value: 
+      objectReference: {fileID: 8120546618078360971, guid: e735df61a62c34f7ebede156bf50e2fc, type: 3}
+    - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
       propertyPath: _puctureEvents
       value: 
       objectReference: {fileID: 1465737613}
     - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _targetColor.b
+      value: 0.3764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _targetColor.g
+      value: 0.3764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _targetColor.r
+      value: 0.3764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _playerMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 05728e81dc7944a8db546cc07043b399, type: 2}
+    - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
       propertyPath: _effectContainer
+      value: 
+      objectReference: {fileID: 1129371}
+    - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _smokeEffectContainer
       value: 
       objectReference: {fileID: 1129371}
     - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
@@ -1798,7 +1822,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _progress: {fileID: 1465737612}
-  _lawnMoverMaterial: {fileID: 2100000, guid: 05728e81dc7944a8db546cc07043b399, type: 2}
 --- !u!1 &1670763605
 GameObject:
   m_ObjectHideFlags: 0
