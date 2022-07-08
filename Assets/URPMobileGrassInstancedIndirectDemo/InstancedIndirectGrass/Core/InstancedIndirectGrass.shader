@@ -167,7 +167,7 @@
                 float3 positionOS = IN.positionOS.x * cameraTransformRightWS * _GrassWidth * (sin(perGrassPivotPosWS.x*95.4643 + perGrassPivotPosWS.z) * 0.45 + 0.55);//random width from posXZ, min 0.1
 
                 //Expand Billboard (billboard Up)
-                positionOS += IN.positionOS.y * cameraTransformUpWS;
+                positionOS += IN.positionOS.y * cameraTransformUpWS * stepped;
                 //=========================================
 
                 //bending by RT (hard code)
