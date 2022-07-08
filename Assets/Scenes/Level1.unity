@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: _instancedIndirectGrass
       value: 
       objectReference: {fileID: 1709084319}
+    - target: {fileID: 3131598589179391213, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 1.6445947
+      objectReference: {fileID: 0}
     - target: {fileID: 3131598589527182659, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
       propertyPath: m_RootOrder
       value: 0
