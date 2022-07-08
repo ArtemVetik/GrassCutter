@@ -201,7 +201,7 @@ PrefabInstance:
     - target: {fileID: 3172932294073532939, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
       propertyPath: _cuttingEffect
       value: 
-      objectReference: {fileID: 1129371}
+      objectReference: {fileID: 0}
     - target: {fileID: 3172932294073532939, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
       propertyPath: _levelProgress
       value: 
@@ -216,11 +216,6 @@ Transform:
 --- !u!4 &1129370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3131598588867195251, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
-  m_PrefabInstance: {fileID: 1129368}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1129371 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 490841909048539102, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
   m_PrefabInstance: {fileID: 1129368}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &102583980 stripped
@@ -1790,6 +1785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _progress: {fileID: 1465737612}
+  _lawnMoverMaterial: {fileID: 2100000, guid: 05728e81dc7944a8db546cc07043b399, type: 2}
 --- !u!1 &1670763605
 GameObject:
   m_ObjectHideFlags: 0

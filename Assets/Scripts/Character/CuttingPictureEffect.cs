@@ -23,6 +23,7 @@ public class CuttingPictureEffect : MonoBehaviour
     {
         var duration = 0.05f;
         _model.DOShakeScale(duration, 0.25f, 10);
+        
         _playerMovement.ChangeSpeed(0.5f, duration);
         Instantiate(_cuttingPicturetemplate, _effectContainer);
     }

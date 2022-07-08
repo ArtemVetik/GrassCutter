@@ -199,6 +199,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 490865075}
     - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _lawnMoverMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 05728e81dc7944a8db546cc07043b399, type: 2}
+    - target: {fileID: 3131598589527182781, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
       propertyPath: _cuttingPicturetemplate
       value: 
       objectReference: {fileID: 8120546618078360971, guid: e735df61a62c34f7ebede156bf50e2fc, type: 3}
@@ -1740,6 +1744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _progress: {fileID: 1465737612}
+  _lawnMoverMaterial: {fileID: 2100000, guid: 05728e81dc7944a8db546cc07043b399, type: 2}
 --- !u!1 &1670763605
 GameObject:
   m_ObjectHideFlags: 0
