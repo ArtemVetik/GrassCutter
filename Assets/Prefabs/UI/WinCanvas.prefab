@@ -34,10 +34,10 @@ RectTransform:
   m_Father: {fileID: 1990302400856710915}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -518}
-  m_SizeDelta: {x: 379.1638, y: 159.7681}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 442}
+  m_SizeDelta: {x: 379.1638, y: 159.76807}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1990302400784245065
 CanvasRenderer:
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 1990302402724222736}
   - component: {fileID: 1990302402724222737}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: WinText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -498,7 +498,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 477}
-  m_SizeDelta: {x: 700.8319, y: 214.5925}
+  m_SizeDelta: {x: 700.8319, y: 214.59253}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1990302402724222736
 CanvasRenderer:
@@ -631,8 +631,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 137}
-  m_SizeDelta: {x: 700.8319, y: 214.5925}
+  m_AnchoredPosition: {x: 0, y: 314}
+  m_SizeDelta: {x: 700.8319, y: 214.59253}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8024632795774096378
 CanvasRenderer:

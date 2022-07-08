@@ -194,6 +194,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3172932294073532939, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _cuttingEffect
+      value: 
+      objectReference: {fileID: 1129371}
+    - target: {fileID: 3172932294073532939, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _levelProgress
+      value: 
+      objectReference: {fileID: 1465737612}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
 --- !u!4 &1129369 stripped
@@ -204,6 +212,11 @@ Transform:
 --- !u!4 &1129370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3131598588867195251, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+  m_PrefabInstance: {fileID: 1129368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1129371 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 490841909048539102, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
   m_PrefabInstance: {fileID: 1129368}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &102583980 stripped
@@ -1569,6 +1582,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 744219611325949934, guid: 88252780bf77d4323988b8d3b71790a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 744219611325949935, guid: 88252780bf77d4323988b8d3b71790a4, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 744219611840591791, guid: 88252780bf77d4323988b8d3b71790a4, type: 3}
