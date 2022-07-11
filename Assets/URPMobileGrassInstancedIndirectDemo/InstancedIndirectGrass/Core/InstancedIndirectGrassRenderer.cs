@@ -54,6 +54,9 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
 
     void LateUpdate()
     {
+        if (allGrassPos.Count == 0)
+            return;
+
         // recreate all buffers if needed
         UpdateAllInstanceTransformBufferIfNeeded();
 
