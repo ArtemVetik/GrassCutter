@@ -4,8 +4,11 @@ using UnityEngine;
 [ExecuteAlways]
 public class InstancedIndirectGrassPosDefine : MonoBehaviour
 {
+
     public int instanceCount = 1000000;
     public float drawDistance = 125;
+    [Header("If Needed")]
+    [SerializeField] private Texture2D _pattern;
 
     private int cacheCount = -1;
 
@@ -31,6 +34,14 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
 
         Debug.Log("UpdatePos (Slow)");
 
+        if (_pattern == null)
+            UpdateByScale();
+        else
+            UpdateByPattern();
+    }
+
+    private void UpdateByScale()
+    {
         //same seed to keep grass visual the same
         UnityEngine.Random.InitState(123);
 
@@ -57,6 +68,29 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
         }
 
         //send all posWS to renderer
+        InstancedIndirectGrassRenderer.instance.allGrassPos = positions;
+        cacheCount = positions.Count;
+    }
+
+    private void UpdateByPattern()
+    {
+        var texturePositions = new List<Vector3>();
+        var pixels = _pattern.GetPixels();
+        for (int y = 0; y < _pattern.height; y++)
+            for (int x = 0; x < _pattern.width; x++)
+                if (pixels[y * _pattern.width + x] == Color.white || pixels[y * _pattern.width + x] == Color.black)
+                    texturePositions.Add(new Vector3(x, 0, y));
+            
+        var scale = transform.lossyScale.x / _pattern.width * 2;
+        var textureCenter = new Vector3(_pattern.width / 2f, 0, _pattern.height / 2f);
+        var positions = new List<Vector3>();
+        for (int i = 0; i < instanceCount; i++)
+        {
+            var texturePos = texturePositions[Random.Range(0, texturePositions.Count)];
+            var position = transform.position + (texturePos - textureCenter) * scale;
+            positions.Add(position);
+        }
+        
         InstancedIndirectGrassRenderer.instance.allGrassPos = positions;
         cacheCount = positions.Count;
     }
