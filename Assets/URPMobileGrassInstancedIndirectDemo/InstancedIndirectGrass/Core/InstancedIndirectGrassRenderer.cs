@@ -136,7 +136,7 @@ public class InstancedIndirectGrassRenderer : MonoBehaviour
             }
             //============================================================================================
 
-            cullingComputeShader.Dispatch(0, Mathf.CeilToInt(jobLength / 64f), 1, 1); //disaptch.X division number must match numthreads.x in compute shader (e.g. 64)
+            cullingComputeShader.Dispatch(0, Mathf.CeilToInt(jobLength / 64f) - 1, 1, 1); //disaptch.X division number must match numthreads.x in compute shader (e.g. 64)
             dispatchCount++;
         }
 

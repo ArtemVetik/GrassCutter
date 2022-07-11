@@ -14,11 +14,6 @@ public class InstancedIndirectGrassPosDefine : MonoBehaviour
 
     void Start()
     {
-        foreach (var item in InstancedIndirectGrassRenderer.instance.allGrassPos)
-        {
-            if (item == Vector3.zero)
-                Debug.Log("ZERO!");
-        }
         UpdatePosIfNeeded();
     }
 
