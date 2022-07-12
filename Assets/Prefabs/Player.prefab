@@ -756,6 +756,7 @@ GameObject:
   - component: {fileID: 3131598589527182657}
   - component: {fileID: 3131598589527182781}
   - component: {fileID: 3172932294073532939}
+  - component: {fileID: 8271507986393908683}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -854,6 +855,19 @@ MonoBehaviour:
   _levelEvents: {fileID: 0}
   _cuttingEffectTemplate: {fileID: 4422538043800441626, guid: d44a3cf32b2a541f8bb521119b10bc9f, type: 3}
   _effectContainer: {fileID: 8809715970939263375}
+--- !u!65 &8271507986393908683
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3131598589527182782}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.05, y: 1, z: 0.26}
+  m_Center: {x: 0, y: 0, z: 1.28}
 --- !u!1 &3131598589652415600
 GameObject:
   m_ObjectHideFlags: 0
