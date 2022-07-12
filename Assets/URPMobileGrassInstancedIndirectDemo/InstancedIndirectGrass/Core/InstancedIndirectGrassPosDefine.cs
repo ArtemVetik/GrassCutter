@@ -4,7 +4,6 @@ using UnityEngine;
 [ExecuteAlways]
 public class InstancedIndirectGrassPosDefine : MonoBehaviour
 {
-
     public int instanceCount = 1000000;
     public float drawDistance = 125;
     [Header("If Needed")]
