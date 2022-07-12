@@ -39,7 +39,8 @@ public class CuttingPictureEffect : MonoBehaviour
         _playerMovement.ChangeSpeed(0.2f, duration);
 
         ChangeColor(_targetColor, duration * 10, _startColor, duration * 10);
-        Instantiate(_smokeEffect, _smokeEffectContainer);
+        var inst = Instantiate(_smokeEffect, _smokeEffectContainer);
+        inst.transform.localPosition = Vector3.zero;
     }
 
     private void ChangeColor(Color targetColor, float durationToTarget, Color normalColor, float durationToNormal)
