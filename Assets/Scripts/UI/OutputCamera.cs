@@ -9,7 +9,6 @@ public class OutputCamera : MonoBehaviour
         if (other.TryGetComponent(out PlayerMovement player))
         {
             _cameraBlend.PlayerFollow();
-            _cameraBlend.DefaultTrigger();
         }
     }
 }

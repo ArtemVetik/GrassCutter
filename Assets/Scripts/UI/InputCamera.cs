@@ -9,7 +9,6 @@ public class InputCamera : MonoBehaviour
         if (other.TryGetComponent(out PlayerMovement player))
         {
             _cameraBlend.StartCamera();
-            _cameraBlend.DefaultTrigger();
         }
     }
 }
