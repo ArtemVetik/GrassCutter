@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7214627720409263944}
   - component: {fileID: 609048967637283879}
   - component: {fileID: 1955320636020837783}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OutputCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 3561803272600999857}
   - component: {fileID: 3561803272600999862}
   - component: {fileID: 3561803272600999863}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 3561803272643551580}
   - component: {fileID: 3561803272643551581}
   - component: {fileID: 3561803272643551522}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 3561803272727668795}
   - component: {fileID: 3561803272727668792}
   - component: {fileID: 3561803272727668793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3561803272988199436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 3561803273714554235}
   - component: {fileID: 3561803273714554232}
   - component: {fileID: 3561803273714554233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,7 +482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3561803273783491402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 3561803273797866686}
   - component: {fileID: 3561803273797866687}
   - component: {fileID: 3561803273797866684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 3561803273847951177}
   - component: {fileID: 3561803273847951182}
   - component: {fileID: 3561803273847951183}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +710,7 @@ GameObject:
   - component: {fileID: 3561803274052851560}
   - component: {fileID: 3561803274052851561}
   - component: {fileID: 3561803274052851566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 3561803274067653320}
   - component: {fileID: 3561803274067653317}
   - component: {fileID: 3561803274067653322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3561803274590472638}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Borders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -917,7 +917,7 @@ GameObject:
   - component: {fileID: 4557949958445021528}
   - component: {fileID: 558630997611325873}
   - component: {fileID: 2814730456174613894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: InputCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
