@@ -654,7 +654,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -680,7 +680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225701985}
   m_LocalRotation: {x: 0.38831988, y: 0, z: 0, w: 0.9215247}
-  m_LocalPosition: {x: 0, y: 20, z: -53.68}
+  m_LocalPosition: {x: 0, y: 25, z: -58.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1974,6 +1974,18 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 658404417}
+    - target: {fileID: 2713703849762355976, guid: 61ebc9d34fad0c54c819c2eb3a42dc5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -118.939804
+      objectReference: {fileID: 0}
+    - target: {fileID: 2713703849762355976, guid: 61ebc9d34fad0c54c819c2eb3a42dc5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 366.99216
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986882881366177466, guid: 61ebc9d34fad0c54c819c2eb3a42dc5d, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 658404417}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61ebc9d34fad0c54c819c2eb3a42dc5d, type: 3}
 --- !u!1001 &3561803273130771741
@@ -2031,6 +2043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bridge
       objectReference: {fileID: 0}
+    - target: {fileID: 9029783100400505326, guid: 06ae6a912b6ebb14a8ce02fcb816a8ce, type: 3}
+      propertyPath: _cameraBlend
+      value: 
+      objectReference: {fileID: 2058922605}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06ae6a912b6ebb14a8ce02fcb816a8ce, type: 3}
 --- !u!1001 &3636153890915124161
