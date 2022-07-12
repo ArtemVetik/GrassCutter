@@ -36,7 +36,7 @@ public class CuttingPictureEffect : MonoBehaviour
         var duration = 0.05f;
 
         _model.DOShakeScale(duration, 0.25f, 10);
-        _playerMovement.ChangeSpeed(0.5f, duration);
+        _playerMovement.ChangeSpeed(0.2f, duration);
 
         ChangeColor(_targetColor, duration * 10, _startColor, duration * 10);
         Instantiate(_smokeEffect, _smokeEffectContainer);

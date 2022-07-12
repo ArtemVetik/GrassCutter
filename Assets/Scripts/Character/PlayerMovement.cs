@@ -27,9 +27,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+
         var shift = new Vector3(_joystick.Direction.x, 0, _joystick.Direction.y);
-        _agent.speed = _speed * _speedRate;
-        _agent.SetDestination(transform.position + shift);
+        _agent.SetDestination(transform.position + shift.normalized);
+
+        _agent.speed = _speed * _speedRate * shift.magnitude;
 
         if (shift.magnitude > 0)
             PositionUpdated?.Invoke();
