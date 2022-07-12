@@ -218,6 +218,14 @@ PrefabInstance:
       propertyPath: _levelProgress
       value: 
       objectReference: {fileID: 1465737612}
+    - target: {fileID: 5031526731278003381, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031526731278003381, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
 --- !u!4 &1129369 stripped
@@ -1652,13 +1660,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1675366294}
     - target: {fileID: 2466246710535664918, guid: 61ebc9d34fad0c54c819c2eb3a42dc5d, type: 3}
-      propertyPath: m_Instructions.Array.data[2].m_FullHash
+      propertyPath: m_Instructions.Array.data[0].m_FullHash
       value: -89729492
       objectReference: {fileID: 0}
     - target: {fileID: 2466246710535664918, guid: 61ebc9d34fad0c54c819c2eb3a42dc5d, type: 3}
-      propertyPath: m_Instructions.Array.data[2].m_VirtualCamera
+      propertyPath: m_Instructions.Array.data[1].m_FullHash
+      value: -455033529
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466246710535664918, guid: 61ebc9d34fad0c54c819c2eb3a42dc5d, type: 3}
+      propertyPath: m_Instructions.Array.data[2].m_FullHash
+      value: -1633579039
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466246710535664918, guid: 61ebc9d34fad0c54c819c2eb3a42dc5d, type: 3}
+      propertyPath: m_Instructions.Array.data[0].m_VirtualCamera
       value: 
       objectReference: {fileID: 929002595}
+    - target: {fileID: 2466246710535664918, guid: 61ebc9d34fad0c54c819c2eb3a42dc5d, type: 3}
+      propertyPath: m_Instructions.Array.data[1].m_VirtualCamera
+      value: 
+      objectReference: {fileID: 745016227}
+    - target: {fileID: 2466246710535664918, guid: 61ebc9d34fad0c54c819c2eb3a42dc5d, type: 3}
+      propertyPath: m_Instructions.Array.data[2].m_VirtualCamera
+      value: 
+      objectReference: {fileID: 1675366294}
     - target: {fileID: 2466246710535664919, guid: 61ebc9d34fad0c54c819c2eb3a42dc5d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2019,6 +2043,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 652083985}
     m_Modifications:
+    - target: {fileID: 1955320636020837783, guid: 06ae6a912b6ebb14a8ce02fcb816a8ce, type: 3}
+      propertyPath: _cameraBlend
+      value: 
+      objectReference: {fileID: 1706439529}
+    - target: {fileID: 2814730456174613894, guid: 06ae6a912b6ebb14a8ce02fcb816a8ce, type: 3}
+      propertyPath: _cameraBlend
+      value: 
+      objectReference: {fileID: 1706439529}
     - target: {fileID: 3561803272988199436, guid: 06ae6a912b6ebb14a8ce02fcb816a8ce, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2071,6 +2103,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7503763767568226325, guid: 06ae6a912b6ebb14a8ce02fcb816a8ce, type: 3}
+      propertyPath: _cameraBlend
+      value: 
+      objectReference: {fileID: 1706439529}
     - target: {fileID: 9029783100400505326, guid: 06ae6a912b6ebb14a8ce02fcb816a8ce, type: 3}
       propertyPath: _cameraBlend
       value: 
