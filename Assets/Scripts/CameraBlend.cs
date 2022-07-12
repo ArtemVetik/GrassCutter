@@ -14,9 +14,15 @@ public class CameraBlend : MonoBehaviour
         _animator.SetTrigger(Parameters.ShowFullPicture);
     }
 
+    public void StartCamera()
+    {
+        _animator.SetTrigger(Parameters.StartCamera);
+    }
+
     private static class Parameters
     {
         public static readonly string PlayerFollow = nameof(PlayerFollow);
         public static readonly string ShowFullPicture = nameof(ShowFullPicture);
+        public static readonly string StartCamera = nameof(StartCamera);
     }
 }
