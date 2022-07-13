@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ConfettiEffect : MonoBehaviour
@@ -18,11 +19,21 @@ public class ConfettiEffect : MonoBehaviour
 
     private void OnLevelWon()
     {
-        foreach (var point in _points)
+        StartCoroutine(SpawnLoop());
+    }
+
+    private IEnumerator SpawnLoop()
+    {
+        while (true)
         {
+            var delay = Random.Range(0f, 0.5f);
+            var point = _points[Random.Range(0, _points.Length)];
             var template = _confettiTemplates[Random.Range(0, _confettiTemplates.Length)];
+
             var inst = Instantiate(template, point);
             inst.transform.localPosition = Vector3.zero;
+
+            yield return new WaitForSeconds(delay);
         }
     }
 

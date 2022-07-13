@@ -21,6 +21,7 @@ public class WinCanvas : CanvasWindow
 
     public override void OnShown()
     {
+        _animator.SetTrigger("Show");
         StartCoroutine(PlaySnapshotAnimation(2f));
     }
 
