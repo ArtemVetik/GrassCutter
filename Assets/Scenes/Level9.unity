@@ -1208,7 +1208,7 @@ PrefabInstance:
     - target: {fileID: 3636153890743711694, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: _texture
       value: 
-      objectReference: {fileID: 2800000, guid: 0aee557c375b84c319b4ca008489c0a4, type: 3}
+      objectReference: {fileID: 2800000, guid: 481f9e75a74e04bbd979e527eed8f2be, type: 3}
     - target: {fileID: 3636153890743711694, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: _endTrigger
       value: 
