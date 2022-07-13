@@ -1152,7 +1152,7 @@ PrefabInstance:
     - target: {fileID: 3636153890459094364, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: instanceMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: f12558125f1ea4bbda18bf5ff17f07b5, type: 2}
+      objectReference: {fileID: 2100000, guid: 20efb2651504d4059aa9b49f26913084, type: 2}
     - target: {fileID: 3636153890459094365, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: m_Name
       value: InstancedIndirectGrass
@@ -1204,11 +1204,11 @@ PrefabInstance:
     - target: {fileID: 3636153890742507928, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a05b67aede9224d8da6f7be823e4535d, type: 2}
+      objectReference: {fileID: 2100000, guid: 70ffb0cdcb8ce473ba36a696e989c190, type: 2}
     - target: {fileID: 3636153890743711694, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: _texture
       value: 
-      objectReference: {fileID: 2800000, guid: 0aee557c375b84c319b4ca008489c0a4, type: 3}
+      objectReference: {fileID: 2800000, guid: 9509104f013fb44c79804088c9015c06, type: 3}
     - target: {fileID: 3636153890743711694, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: _endTrigger
       value: 
@@ -1216,7 +1216,7 @@ PrefabInstance:
     - target: {fileID: 7024311493901941396, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: _pattern
       value: 
-      objectReference: {fileID: 2800000, guid: 0aee557c375b84c319b4ca008489c0a4, type: 3}
+      objectReference: {fileID: 2800000, guid: 9509104f013fb44c79804088c9015c06, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
 --- !u!4 &1234931175 stripped
@@ -1285,7 +1285,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 0ba0599925b1946bbbe5922c956f45ff, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 28c111f76fd7d4cc6bcc5e2e5ebf9577, type: 2}
 --- !u!4 &1258426570
 Transform:
   m_ObjectHideFlags: 0
