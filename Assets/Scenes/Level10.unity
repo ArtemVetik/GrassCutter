@@ -777,6 +777,7 @@ MonoBehaviour:
   _winCanvas: {fileID: 524228989}
   _loseCanvas: {fileID: 102583980}
   _gameCanvas: {fileID: 1996424188}
+  _joystic: {fileID: 1160208899}
 --- !u!1 &554674811
 GameObject:
   m_ObjectHideFlags: 0

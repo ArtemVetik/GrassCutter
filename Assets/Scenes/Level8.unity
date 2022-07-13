@@ -823,6 +823,7 @@ MonoBehaviour:
   _winCanvas: {fileID: 524228989}
   _loseCanvas: {fileID: 102583980}
   _gameCanvas: {fileID: 1996424188}
+  _joystic: {fileID: 1160208899}
 --- !u!4 &651784200 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3751451452962781786, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}

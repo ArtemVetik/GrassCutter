@@ -7,6 +7,7 @@ public class UICanvasPresenter : MonoBehaviour
     [SerializeField] private WinCanvas _winCanvas;
     [SerializeField] private LoseCanvas _loseCanvas;
     [SerializeField] private GameCanvas _gameCanvas;
+    [SerializeField] private Joystick _joystic;
 
     private void OnEnable()
     {
@@ -25,6 +26,7 @@ public class UICanvasPresenter : MonoBehaviour
         _gameCanvas.Hide();
         _winCanvas.Show();
         _cameraBlend.ShowPicture();
+        _joystic.enabled = false;
     }
 
     private void OnLose()
@@ -32,5 +34,6 @@ public class UICanvasPresenter : MonoBehaviour
         _gameCanvas.Hide();
         _loseCanvas.Show();
         _cameraBlend.ShowPicture();
+        _joystic.enabled = false;
     }
 }

@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-
         var shift = new Vector3(_joystick.Direction.x, 0, _joystick.Direction.y);
         _agent.SetDestination(transform.position + shift.normalized);
 
