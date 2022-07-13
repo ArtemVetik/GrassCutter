@@ -1152,7 +1152,7 @@ PrefabInstance:
     - target: {fileID: 3636153890459094364, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: instanceMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 7d44d7c3ac89c4f389c5e5754ada857a, type: 2}
+      objectReference: {fileID: 2100000, guid: 20efb2651504d4059aa9b49f26913084, type: 2}
     - target: {fileID: 3636153890459094365, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: m_Name
       value: InstancedIndirectGrass
@@ -1204,11 +1204,11 @@ PrefabInstance:
     - target: {fileID: 3636153890742507928, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9386647c7d03f44aa9968255867eabc4, type: 2}
+      objectReference: {fileID: 2100000, guid: 70ffb0cdcb8ce473ba36a696e989c190, type: 2}
     - target: {fileID: 3636153890743711694, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: _texture
       value: 
-      objectReference: {fileID: 2800000, guid: f9593ba4294b946049bc8be2ebde5e78, type: 3}
+      objectReference: {fileID: 2800000, guid: 9509104f013fb44c79804088c9015c06, type: 3}
     - target: {fileID: 3636153890743711694, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: _endTrigger
       value: 
@@ -1216,7 +1216,7 @@ PrefabInstance:
     - target: {fileID: 7024311493901941396, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: _pattern
       value: 
-      objectReference: {fileID: 2800000, guid: f9593ba4294b946049bc8be2ebde5e78, type: 3}
+      objectReference: {fileID: 2800000, guid: 9509104f013fb44c79804088c9015c06, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
 --- !u!4 &1234931175 stripped
