@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEditor;
 
 public class LevelAnalytics : MonoBehaviour
 {
     [SerializeField] private EndLevelTrigger _endLevelTrigger;
     [SerializeField] private LoseCanvas _loseCanvas;
+    [SerializeField] private Tutorial _tutorial;
 
     private Analytics _analytics;
     private int _levelNumber;
@@ -16,8 +18,23 @@ public class LevelAnalytics : MonoBehaviour
         _levelNumber = Singleton<LevelLoader>.Instance.LevelIndex + 1;
     }
 
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        bool dirty = _endLevelTrigger == null || _loseCanvas == null || _tutorial == null;
+
+        _endLevelTrigger ??= FindObjectOfType<EndLevelTrigger>();
+        _loseCanvas ??= FindObjectOfType<LoseCanvas>();
+        _tutorial ??= FindObjectOfType<Tutorial>();
+
+        if (dirty)
+            EditorUtility.SetDirty(gameObject);
+    }
+#endif
+
     private void OnEnable()
     {
+        _tutorial.Completed += OnTutorCompleted;
         _endLevelTrigger.Won += OnLevelCompleted;
         _endLevelTrigger.Lost += OnLevelFailed;
         _loseCanvas.Restarted += OnReloading;
@@ -25,6 +42,7 @@ public class LevelAnalytics : MonoBehaviour
 
     private void OnDisable()
     {
+        _tutorial.Completed -= OnTutorCompleted;
         _endLevelTrigger.Won -= OnLevelCompleted;
         _endLevelTrigger.Lost -= OnLevelFailed;
         _loseCanvas.Restarted -= OnReloading;
@@ -33,13 +51,13 @@ public class LevelAnalytics : MonoBehaviour
     private void Start()
     {
         _analytics.FireEvent("main_menu");
-        OnTutorCompleted();
     }
 
     private void OnTutorCompleted()
     {
         var parameters = new Dictionary<string, object>() { { "level", _levelNumber }, };
         _analytics.FireEvent("level_start", parameters);
+        _analytics.ForceSendEventBuffer();
 
         _startTime = Time.realtimeSinceStartup;
     }
@@ -52,7 +70,7 @@ public class LevelAnalytics : MonoBehaviour
             { "time_spent", (int)timeSpent },
         };
 
-        _analytics.FireEvent("fail", parameters);
+        _analytics.FireEvent("level_fail", parameters);
     }
 
     private void OnLevelCompleted()
@@ -64,6 +82,7 @@ public class LevelAnalytics : MonoBehaviour
         };
 
         _analytics.FireEvent("level_complete", parameters);
+        _analytics.ForceSendEventBuffer();
     }
 
     private void OnReloading()
@@ -72,6 +91,6 @@ public class LevelAnalytics : MonoBehaviour
             { "level", _levelNumber },
         };
 
-        _analytics.FireEvent("restart", parameters);
+        _analytics.FireEvent("level_restart", parameters);
     }
 }

@@ -71,6 +71,11 @@ public class Analytics : Singleton<Analytics>
         AppMetrica.Instance.ReportEvent(eventName, eventProps);
     }
 
+    public void ForceSendEventBuffer()
+    {
+        AppMetrica.Instance.SendEventsBuffer();
+    }
+
     private void SetBasicProperty(int sessionCount)
     {
         int daysInGame = DateTime.Today.Subtract(DateTime.Parse(_regDay)).Days;
@@ -81,5 +86,10 @@ public class Analytics : Singleton<Analytics>
 
         AppMetrica.Instance.SetUserProfileID(new DuckyID().Value());
         AppMetrica.Instance.ReportUserProfile(userProfile);
+    }
+
+    private void OnApplicationQuit()
+    {
+        FireEvent("session_end");
     }
 }
