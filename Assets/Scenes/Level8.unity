@@ -1208,7 +1208,7 @@ PrefabInstance:
     - target: {fileID: 3636153890743711694, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: _texture
       value: 
-      objectReference: {fileID: 2800000, guid: 9509104f013fb44c79804088c9015c06, type: 3}
+      objectReference: {fileID: 2800000, guid: d518be04df08b41f1ba313f2a0a4a7ea, type: 3}
     - target: {fileID: 3636153890743711694, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: _endTrigger
       value: 
@@ -1216,7 +1216,7 @@ PrefabInstance:
     - target: {fileID: 7024311493901941396, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: _pattern
       value: 
-      objectReference: {fileID: 2800000, guid: 9509104f013fb44c79804088c9015c06, type: 3}
+      objectReference: {fileID: 2800000, guid: d518be04df08b41f1ba313f2a0a4a7ea, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
 --- !u!4 &1234931175 stripped

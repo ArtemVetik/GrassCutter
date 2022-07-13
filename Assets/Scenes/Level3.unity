@@ -2166,10 +2166,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: 10013fde63a86fa4c99ee4d147b4934e, type: 3}
     - target: {fileID: 3636153890459094366, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
-      propertyPath: instanceCount
-      value: 19984
-      objectReference: {fileID: 0}
-    - target: {fileID: 3636153890459094366, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: _scaleModificator
       value: 1
       objectReference: {fileID: 0}
