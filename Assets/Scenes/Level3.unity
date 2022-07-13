@@ -2618,6 +2618,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7461014064952967203, guid: 3fcfce10a28347b46a52fbbdc91f6313, type: 3}
+      propertyPath: _tutorial
+      value: 
+      objectReference: {fileID: 4904823280186900038}
     - target: {fileID: 9004646983878443227, guid: 3fcfce10a28347b46a52fbbdc91f6313, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2628,6 +2632,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fcfce10a28347b46a52fbbdc91f6313, type: 3}
+--- !u!1 &4904823280186900038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4908842392989642421, guid: 3fcfce10a28347b46a52fbbdc91f6313, type: 3}
+  m_PrefabInstance: {fileID: 4904823280186900037}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8404079570327302656
 PrefabInstance:
   m_ObjectHideFlags: 0
