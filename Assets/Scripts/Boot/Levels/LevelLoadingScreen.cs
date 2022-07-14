@@ -36,7 +36,7 @@ public class LevelLoadingScreen : MonoBehaviour
             yield return null;
             _loadingIndicator.transform.Rotate(0, 0, 10f * Time.deltaTime);
         }
-
+        
         _canvasGroup.DOFade(0f, 0.5f).OnComplete(() => onLoaded?.Invoke());
     }
 }
