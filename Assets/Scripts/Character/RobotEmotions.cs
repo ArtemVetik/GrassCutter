@@ -37,7 +37,9 @@ public class RobotEmotions : MonoBehaviour
 
     private void ChangeEmotion(Texture normalTexture, Texture targetTexture, float delay)
     {
-        StopAllCoroutines();
+        if (_coroutine != null)
+            StopCoroutine(_coroutine);
+
         _coroutine = StartCoroutine(DelayEmotionChange(normalTexture, targetTexture, delay));
     }
 
