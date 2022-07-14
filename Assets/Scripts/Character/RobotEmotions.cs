@@ -1,19 +1,18 @@
 using UnityEngine;
 
+[RequireComponent(typeof(MeshRenderer))]
 public class RobotEmotions : MonoBehaviour
 {
     [SerializeField] private PictureEvents _pictureEvents;
-    [SerializeField] private MeshRenderer _renderer;
-    [SerializeField] private Material[] _emotionMaterials;
+    [SerializeField] private Texture _idle;
+    [SerializeField] private Texture _smile;
+    [SerializeField] private Texture _angry;
+    [SerializeField] private Material _displayMat;
 
-    private Material _displayMat;
+    private MeshRenderer _renderer;
 
     private void OnEnable()
     {
-        _displayMat = _renderer.materials[2];
-
-        ChangeEmotion(0);
-
         _pictureEvents.CuttingGrass += Smile;
         _pictureEvents.CuttingPicture += Angry;
     }
@@ -24,21 +23,25 @@ public class RobotEmotions : MonoBehaviour
         _pictureEvents.CuttingPicture += Angry;
     }
 
-    private void ChangeEmotion(int emotionNumber)
+    private void Awake()
     {
-        for (int i = 0; i < _emotionMaterials.Length; i++)
-        {
-            _displayMat = _emotionMaterials[emotionNumber];
-        }
-    }
+        _renderer = GetComponent<MeshRenderer>();
 
-    private void Smile()
-    {
-        ChangeEmotion(2);
+        ChangeEmotion(_idle);
     }
 
     private void Angry()
     {
-        ChangeEmotion(1);
+        ChangeEmotion(_angry);
+    }
+
+    private void Smile()
+    {
+        ChangeEmotion(_smile);
+    }
+
+    private void ChangeEmotion(Texture texture)
+    {
+        _displayMat.mainTexture = texture;
     }
 }
