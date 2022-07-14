@@ -13,6 +13,8 @@ public class LevelLoader : Singleton<LevelLoader>
         set => PlayerPrefs.SetInt(SavedLevelKey, value);
     }
 
+    public int LevelIndex => _savedLevel;
+
     public void LoadSavedLevel()
     {
         LoadScene(_levelList.Levels[_savedLevel].ScenePath);

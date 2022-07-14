@@ -25,3 +25,11 @@ MonoBehaviour:
     scenePath: Assets/Scenes/Level5.unity
   - sceneAsset: {fileID: 102900000, guid: c2421b91829ff429480a54c86044fa2f, type: 3}
     scenePath: Assets/Scenes/Level6.unity
+  - sceneAsset: {fileID: 102900000, guid: 0866edf405f3f487dad65bdbac1165b4, type: 3}
+    scenePath: Assets/Scenes/Level7.unity
+  - sceneAsset: {fileID: 102900000, guid: fe05c86c1c80941499d25e466ede40ae, type: 3}
+    scenePath: Assets/Scenes/Level8.unity
+  - sceneAsset: {fileID: 102900000, guid: 4b8247764b8f74d119b794941e798e71, type: 3}
+    scenePath: Assets/Scenes/Level9.unity
+  - sceneAsset: {fileID: 102900000, guid: bb2101e50390b47a79542ba1e5e7df3a, type: 3}
+    scenePath: Assets/Scenes/Level10.unity
