@@ -35,6 +35,7 @@ public class CuttingPictureEffect : MonoBehaviour
     {
         var duration = 0.05f;
 
+        _model.transform.localScale = Vector3.one;
         _model.DOShakeScale(duration, 0.25f, 10);
         _playerMovement.ChangeSpeed(0.2f, duration);
 
