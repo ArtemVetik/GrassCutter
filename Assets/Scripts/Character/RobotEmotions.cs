@@ -22,17 +22,17 @@ public class RobotEmotions : MonoBehaviour
     private void OnDisable()
     {
         _pictureEvents.CuttingGrass -= Smile;
-        _pictureEvents.CuttingPicture += Angry;
+        _pictureEvents.CuttingPicture -= Angry;
     }
 
     private void Angry()
     {
-        ChangeEmotion(_idle, _angry, 0.5f);
+        ChangeEmotion(_idle, _angry, 0.2f);
     }
 
     private void Smile()
     {
-        ChangeEmotion(_idle, _smile, 0.5f);
+        ChangeEmotion(_idle, _smile, 0.2f);
     }
 
     private void ChangeEmotion(Texture normalTexture, Texture targetTexture, float delay)
