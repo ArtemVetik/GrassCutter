@@ -9,7 +9,8 @@ public class RobotEmotions : MonoBehaviour
     [SerializeField] private Texture _angry;
     [SerializeField] private Material _displayMat;
 
-    private Coroutine _coroutine;
+    private Coroutine _angryCoroutine;
+    private Coroutine _smileCoroutine;
 
     private void OnEnable()
     {
@@ -27,20 +28,27 @@ public class RobotEmotions : MonoBehaviour
 
     private void Angry()
     {
-        ChangeEmotion(_idle, _angry, 0.2f);
+        if (_angryCoroutine != null)
+            StopCoroutine(_angryCoroutine);
+        if (_smileCoroutine != null)
+            StopCoroutine(_smileCoroutine);
+
+        _angryCoroutine = ChangeEmotion(_idle, _angry, 0.2f);
     }
 
     private void Smile()
     {
-        ChangeEmotion(_idle, _smile, 0.2f);
+        if (_angryCoroutine != null)
+            return;
+        if (_smileCoroutine != null)
+            StopCoroutine(_smileCoroutine);
+
+        _smileCoroutine = ChangeEmotion(_idle, _smile, 0.2f);
     }
 
-    private void ChangeEmotion(Texture normalTexture, Texture targetTexture, float delay)
+    private Coroutine ChangeEmotion(Texture normalTexture, Texture targetTexture, float delay)
     {
-        if (_coroutine != null)
-            StopCoroutine(_coroutine);
-
-        _coroutine = StartCoroutine(DelayEmotionChange(normalTexture, targetTexture, delay));
+        return StartCoroutine(DelayEmotionChange(normalTexture, targetTexture, delay));
     }
 
     private IEnumerator DelayEmotionChange(Texture normalTexture, Texture targetTexture, float delay)
