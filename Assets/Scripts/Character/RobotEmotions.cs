@@ -25,12 +25,12 @@ public class RobotEmotions : MonoBehaviour
 
     private void Angry()
     {
-        ChangeEmotion(_idle, _angry, 1);
+        ChangeEmotion(_idle, _angry, 0.5f);
     }
 
     private void Smile()
     {
-        ChangeEmotion(_idle, _smile, 1);
+        ChangeEmotion(_idle, _smile, 0.5f);
     }
 
     private void ChangeEmotion(Texture normalTexture, Texture targetTexture, float delay)
