@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pictureEvents: {fileID: 0}
-  _idle: {fileID: 2100000, guid: 6da3a8ca260e447afaa93ed1e33e08bd, type: 2}
-  _smile: {fileID: 2100000, guid: a954f515f617444e6adf46b1b6760f70, type: 2}
-  _angry: {fileID: 2100000, guid: f11f3e7ed5874438983b06bf02a4dc0e, type: 2}
-  _displayMat: {fileID: 0}
+  _idle: {fileID: 2800000, guid: 7ffea91d45f064f5ca011bfa92f996ac, type: 3}
+  _smile: {fileID: 2800000, guid: e43c6b7d974524b378b349058358515b, type: 3}
+  _angry: {fileID: 2800000, guid: 815a64d129cab480f89f327f4179f73d, type: 3}
+  _displayMat: {fileID: 2100000, guid: 6da3a8ca260e447afaa93ed1e33e08bd, type: 2}
