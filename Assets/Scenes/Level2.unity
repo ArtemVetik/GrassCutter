@@ -560,7 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelProgress: {fileID: 1465737612}
   _maxErrorPercentage: 0.5
-  _winPercentage: 0.9
+  _winPercentage: 0.8
 --- !u!1 &211725259
 GameObject:
   m_ObjectHideFlags: 0
