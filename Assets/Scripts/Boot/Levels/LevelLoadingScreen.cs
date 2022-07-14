@@ -3,10 +3,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class LevelLoadingScreen : MonoBehaviour
 {
-    [SerializeField] private Slider _processSlider;
+    [SerializeField] private CanvasGroup _canvasGroup;
+    [SerializeField] private Transform _loadingIndicator;
 
     private Coroutine _loadOperation;
 
@@ -25,14 +27,16 @@ public class LevelLoadingScreen : MonoBehaviour
 
     private IEnumerator LoadSceneOperation(string sceneName, Action onLoaded)
     {
+        _canvasGroup.alpha = 0f;
+        _canvasGroup.DOFade(1f, 0.1f);
         var operation = SceneManager.LoadSceneAsync(sceneName);
 
         while (operation.isDone == false)
         {
             yield return null;
-            _processSlider.value = operation.progress;
+            _loadingIndicator.transform.Rotate(0, 0, 10f * Time.deltaTime);
         }
 
-        onLoaded?.Invoke();
+        _canvasGroup.DOFade(0f, 0.5f).OnComplete(() => onLoaded?.Invoke());
     }
 }
