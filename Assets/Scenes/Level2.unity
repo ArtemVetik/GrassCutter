@@ -134,6 +134,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassEffectContainer
       objectReference: {fileID: 0}
+    - target: {fileID: 2307664430597224894, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _idle
+      value: 
+      objectReference: {fileID: 2800000, guid: 7ffea91d45f064f5ca011bfa92f996ac, type: 3}
+    - target: {fileID: 2307664430597224894, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _angry
+      value: 
+      objectReference: {fileID: 2800000, guid: 815a64d129cab480f89f327f4179f73d, type: 3}
+    - target: {fileID: 2307664430597224894, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _smile
+      value: 
+      objectReference: {fileID: 2800000, guid: e43c6b7d974524b378b349058358515b, type: 3}
+    - target: {fileID: 2307664430597224894, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _displayMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 6da3a8ca260e447afaa93ed1e33e08bd, type: 2}
+    - target: {fileID: 2307664430597224894, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
+      propertyPath: _pictureEvents
+      value: 
+      objectReference: {fileID: 1465737613}
     - target: {fileID: 2526575881740414664, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
       propertyPath: _instancedIndirectGrass
       value: 
@@ -332,7 +352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8809715970939263375, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 1.98
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
