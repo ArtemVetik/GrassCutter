@@ -10,6 +10,7 @@ public class CuttingPictureEffect : MonoBehaviour
     [SerializeField] private ParticleSystem _smokeEffect;
     [SerializeField] private Renderer _renderer;
     [SerializeField] private Color _targetColor;
+    [SerializeField] private Animator _sawAnimator;
 
     private Color _startColor;
     private Material _material;
@@ -23,6 +24,7 @@ public class CuttingPictureEffect : MonoBehaviour
     {
         _puctureEvents.CuttingPicture -= OnCutPicture;
         _material.color = _startColor;
+        _sawAnimator.speed = 1;
     }
 
     private void Start()
@@ -37,6 +39,7 @@ public class CuttingPictureEffect : MonoBehaviour
 
         _model.DOShakeScale(duration, 0.25f, 10);
         _playerMovement.ChangeSpeed(0.2f, duration);
+        _sawAnimator.speed = 0.5f;
 
         ChangeColor(_targetColor, duration * 10, _startColor, duration * 10);
         var inst = Instantiate(_smokeEffect, _smokeEffectContainer);
