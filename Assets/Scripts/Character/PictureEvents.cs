@@ -8,6 +8,7 @@ public class PictureEvents : MonoBehaviour
     private float _previousLoseProgress;
     private float _previousWinProgress;
 
+
     public event UnityAction CuttingPicture;
     public event UnityAction CuttingGrass;
 
