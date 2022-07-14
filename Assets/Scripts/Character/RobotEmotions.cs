@@ -9,6 +9,8 @@ public class RobotEmotions : MonoBehaviour
     [SerializeField] private Texture _angry;
     [SerializeField] private Material _displayMat;
 
+    private Coroutine _coroutine;
+
     private void OnEnable()
     {
         _pictureEvents.CuttingGrass += Smile;
@@ -35,7 +37,8 @@ public class RobotEmotions : MonoBehaviour
 
     private void ChangeEmotion(Texture normalTexture, Texture targetTexture, float delay)
     {
-        StartCoroutine(DelayEmotionChange(normalTexture, targetTexture, delay));
+        StopAllCoroutines();
+        _coroutine = StartCoroutine(DelayEmotionChange(normalTexture, targetTexture, delay));
     }
 
     private IEnumerator DelayEmotionChange(Texture normalTexture, Texture targetTexture, float delay)
