@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GrassMaterial 5
+  m_Name: GrassMaterialFB
   m_Shader: {fileID: 4800000, guid: fd090f3b1d7b5df4f9c363d609cfa330, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseColorTexture:
-        m_Texture: {fileID: 2800000, guid: a151207bf08f5428c96f0e5e7fe28038, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0391c1c0c44464e6a90d99fd69f8462e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -95,14 +95,14 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
-    - _BoundSize: {r: 10, g: 10, b: 0, a: 0}
+    - _BaseColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+    - _BoundSize: {r: 30, g: 30, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EffectorPosWS: {r: -9.202405, g: 0.43531817, b: -25.3365, a: 0}
+    - _EffectorPosWS: {r: 0, g: 0.5, b: -17.2, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
-    - _LossyBoundSize: {r: 10, g: 10, b: 0, a: 0}
-    - _PivotPosWS: {r: 0, g: 0, b: -20, a: 0}
+    - _LossyBoundSize: {r: 30, g: 30, b: 0, a: 0}
+    - _PivotPosWS: {r: 0, g: 0, b: 23.7, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _WindADirection: {r: 0.1, g: 0.1, b: 0, a: 1}
     - _WindATiling: {r: 0.1, g: 0.1, b: 0, a: 1}
