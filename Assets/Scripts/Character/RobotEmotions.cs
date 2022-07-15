@@ -17,7 +17,7 @@ public class RobotEmotions : MonoBehaviour
         _pictureEvents.CuttingGrass += Smile;
         _pictureEvents.CuttingPicture += Angry;
 
-        ChangeEmotion(_idle, _idle, 0.1f);
+        StartCoroutine(DelayEmotionChange(_idle, _idle, 0.1f));
     }
 
     private void OnDisable()
@@ -33,7 +33,7 @@ public class RobotEmotions : MonoBehaviour
         if (_smileCoroutine != null)
             StopCoroutine(_smileCoroutine);
 
-        _angryCoroutine = ChangeEmotion(_idle, _angry, 0.2f);
+        _angryCoroutine = StartCoroutine(DelayEmotionChange(_idle, _angry, 0.2f));
     }
 
     private void Smile()
@@ -43,12 +43,7 @@ public class RobotEmotions : MonoBehaviour
         if (_smileCoroutine != null)
             StopCoroutine(_smileCoroutine);
 
-        _smileCoroutine = ChangeEmotion(_idle, _smile, 0.2f);
-    }
-
-    private Coroutine ChangeEmotion(Texture normalTexture, Texture targetTexture, float delay)
-    {
-        return StartCoroutine(DelayEmotionChange(normalTexture, targetTexture, delay));
+        _smileCoroutine = StartCoroutine(DelayEmotionChange(_idle, _smile, 0.2f));
     }
 
     private IEnumerator DelayEmotionChange(Texture normalTexture, Texture targetTexture, float delay)
@@ -56,5 +51,7 @@ public class RobotEmotions : MonoBehaviour
         _displayMat.mainTexture = targetTexture;
         yield return new WaitForSeconds(delay);
         _displayMat.mainTexture = normalTexture;
+
+        _angryCoroutine = _smileCoroutine = null;
     }
 }
