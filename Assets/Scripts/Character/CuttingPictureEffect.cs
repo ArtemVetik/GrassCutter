@@ -1,10 +1,9 @@
 using UnityEngine;
 using DG.Tweening;
-using System.Collections;
 
 public class CuttingPictureEffect : MonoBehaviour
 {
-    private const int MaxErrorCount = 100;
+    private const int MaxErrorCount = 50;
 
     [SerializeField] private PictureEvents _puctureEvents;
     [SerializeField] private PlayerMovement _playerMovement;
@@ -43,9 +42,9 @@ public class CuttingPictureEffect : MonoBehaviour
 
         var duration = 0.05f;
 
-        _model.transform.localScale = Vector3.one;
+        _model.DOComplete(false);
         _model.DOShakeScale(duration, 0.25f, 10);
-        _playerMovement.ChangeSpeed(Mathf.Lerp(1f, 0.2f, _errorCount / MaxErrorCount), duration);
+        _playerMovement.ChangeSpeed(Mathf.Lerp(1f, 0.2f, (float)_errorCount / MaxErrorCount), duration);
 
         ChangeColor(_targetColor, duration * 10, _startColor, duration * 10);
         var inst = Instantiate(_smokeEffect, _smokeEffectContainer);
