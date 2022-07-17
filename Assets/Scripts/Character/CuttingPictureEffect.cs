@@ -3,7 +3,8 @@ using DG.Tweening;
 
 public class CuttingPictureEffect : MonoBehaviour
 {
-    private const int MaxErrorCount = 50;
+    private const int PermissibleError = 20;
+    private const int MaxErrorCount = 80;
 
     [SerializeField] private PictureEvents _puctureEvents;
     [SerializeField] private PlayerMovement _playerMovement;
@@ -39,6 +40,8 @@ public class CuttingPictureEffect : MonoBehaviour
     {
         _lastCuttingTime = Time.realtimeSinceStartup;
         _errorCount = Mathf.Clamp(_errorCount + 1, 0, MaxErrorCount);
+        if (_errorCount < PermissibleError)
+            return;
 
         var duration = 0.05f;
 
