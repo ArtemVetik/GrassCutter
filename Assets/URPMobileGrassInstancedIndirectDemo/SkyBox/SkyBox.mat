@@ -28,3 +28,4 @@ Material:
     m_Colors:
     - _ColorMiddle: {r: 0.7971698, g: 1, b: 1, a: 1}
     - _ColorTop: {r: 0.4198113, g: 1, b: 0.9761566, a: 1}
+  m_BuildTextureStacks: []

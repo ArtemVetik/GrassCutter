@@ -98,7 +98,7 @@ Material:
     - _BaseColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
     - _BoundSize: {r: 8, g: 8, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EffectorPosWS: {r: -0.29322776, g: 0.46937522, b: -24.517715, a: 0}
+    - _EffectorPosWS: {r: 0, g: 0.5, b: -39.93, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 1, g: 1, b: 1, a: 1}
     - _LossyBoundSize: {r: 8, g: 8, b: 0, a: 0}
