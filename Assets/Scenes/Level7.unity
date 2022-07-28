@@ -1296,10 +1296,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: InstancedIndirectGrass
       objectReference: {fileID: 0}
-    - target: {fileID: 3636153890459094366, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
-      propertyPath: instanceCount
-      value: 5000
-      objectReference: {fileID: 0}
     - target: {fileID: 3636153890459094367, guid: 9a26e5de156c06e41bc47586a8f2ec6a, type: 3}
       propertyPath: m_RootOrder
       value: 0
