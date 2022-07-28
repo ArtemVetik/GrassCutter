@@ -442,10 +442,6 @@ PrefabInstance:
       propertyPath: m_RenderMode
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 6752628129729751719, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 6766055422143398996, guid: 9aa1312998f77e043ace8038826e03bb, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
