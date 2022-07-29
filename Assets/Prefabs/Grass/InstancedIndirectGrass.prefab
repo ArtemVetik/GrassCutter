@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d6ee35f46cc6a449199c3d64518325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instanceCount: 10000
+  instanceCount: 15000
   drawDistance: 1000
   _pattern: {fileID: 0}
 --- !u!114 &3636153890459094364
